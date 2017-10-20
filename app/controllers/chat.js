@@ -12,5 +12,12 @@ module.exports.iniciaChat = function(application, req, res) {
         return; // para não passar do if
     }
 
-    res.render('chat');
+    /* usar objeto do socket io dentro do controller */
+    application.get('io')
+        .emit('msgParaCliente', {
+            apelido: dadosForm.apelido,
+            mensagem: ' acabou de entrar no chat'
+        });
+
+    res.render('chat', { dadosForm: dadosForm });
 }
