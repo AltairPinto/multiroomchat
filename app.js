@@ -1,12 +1,13 @@
 /* importar as configurações do servidor */
 var app = require('./config/server');
+var http = require('http').Server(app);
 
 /* parametrizar a porta de escuta */
 var server = app.listen(3000, function() {
     console.log('Servidor Online');
 })
 
-var io = require('socket.io').listen(server);
+var io = require('socket.io')(http).listen(server);
 
 app.set('io', io);
 
