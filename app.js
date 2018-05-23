@@ -3,7 +3,7 @@ var app = require('./config/server');
 var http = require('http').Server(app);
 
 /* parametrizar a porta de escuta */
-var server = app.listen(3000, function() {
+var server = app.listen(app.get('port'), function() {
     console.log('Servidor Online');
 })
 

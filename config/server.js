@@ -34,4 +34,8 @@ consign()
     .into(app);
 
 /* exportar o objeto app */
+
+const port = process.env.PORT || 80;
+app.set('port', port);
+
 module.exports = app;
