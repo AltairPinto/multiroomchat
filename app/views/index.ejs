@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>Multiroom Chat</title>
 
@@ -21,7 +23,7 @@
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <div class="row-fluid user-row">
-                            <img src="images/multiroom_chat_2.png" class="img-responsive" alt="Multiroom Chat" />
+                            <img src="images/valorauto_1.png" class="img-responsive" alt="Multiroom Chat" />
                         </div>
                     </div>
                     <div class="panel-body">
@@ -30,9 +32,11 @@
                                 <label class="panel-login">
                                         <div class="login_result"></div>
                                     </label>
-                                <input class="form-control" placeholder="Nome ou apelido" id="apelido" type="text" name="apelido">
-                                <br></br>
-                                <input class="btn btn-lg btn-success btn-block" type="submit" id="entrar" value="Entrar »">
+                                <input class="form-control" placeholder="Nome ou apelido" id="apelido" type="text" name="apelido" value="<%- nick %>" />
+                                <input class="form-control" placeholder="Código de acesso" id="codigo" type="password" name="codigo" />
+                                <br/>
+                                <br/>
+                                <input class="btn btn-lg btn-block" type="submit" id="entrar" value="Entrar »" />
                             </fieldset>
                         </form>
                     </div>
